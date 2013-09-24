@@ -1,0 +1,3 @@
+
+class Serializer(object):
+    pass
