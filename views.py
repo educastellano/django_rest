@@ -1,6 +1,5 @@
 from django.views.generic.base import View
 from django.utils import timezone
-from response import HttpWrapper
 try:
     import simplejson as json
 except ImportError:
@@ -18,7 +17,6 @@ class RestView(View):
             self.delete = self.data_tweak
         if hasattr(self, 'serializer_class') and self.serializer_class:
             self.serializer = self.serializer_class()
-        self.http = HttpWrapper()
 
     def data_tweak(self, request, *args, **kwargs):
         method = self.request.method
