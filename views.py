@@ -1,5 +1,6 @@
 from django.views.generic.base import View
 from django.utils import timezone
+import http
 try:
     import simplejson as json
 except ImportError:
